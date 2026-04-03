@@ -136,24 +136,28 @@ h3,
   z-index: 1;
 }
 
-main {
+main section {
+  margin: 45px auto;
+}
+
+.main-section-festival-program {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.main-header {
+.section-header {
   margin-top: 70px;
   margin-bottom: 70px;
   text-align: center;
 }
 
-.main-header .subtitle-second {
+.section-header .subtitle-second {
   width: 588px;
   margin: 10px auto;
 }
 
-.main-section {
+.article {
   background-color: #f1fdff;
   border-radius: 10px;
   width: 1240px;
@@ -164,11 +168,11 @@ main {
   margin-bottom: 70px;
 }
 
-.main-section img {
+.article img {
   border-radius: inherit;
 }
 
-.main-section .section-title {
+.article .article-title {
   margin-bottom: 35px;
 }
 
@@ -182,20 +186,20 @@ main {
 }
 
 .event {
+  display: block;
   margin-bottom: 10px;
 }
 
 .event-time {
-  margin: 0;
+  display: block;
   color: #3d8c9d;
 }
 
 .main-section-reward {
-  width: 1285px;
   height: 738px;
   background-image: url("./images/Background.png");
   background-repeat: no-repeat;
-  margin: 45px 0;
+  background-position: center;
   display: flex;
 }
 
@@ -301,6 +305,7 @@ main {
 }
 
 form input {
+  display: block;
   width: 506px;
   height: 66px;
   background-color: #f9fadf;
@@ -308,6 +313,10 @@ form input {
   border-style: none;
   font-size: 20px;
   line-height: 120%;
+}
+
+form input[type="submit"] {
+  cursor: pointer;
 }
 
 form input:not([type="submit"]) {
