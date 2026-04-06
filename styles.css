@@ -68,11 +68,21 @@ h3,
   color: #73a6b1;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .header {
   background-color: #f1fdff;
   min-height: 100vh;
   padding: 63px 75px 0 100px;
   position: relative;
+  z-index: 0;
+}
+
+.btn-nav {
+  display: none;
 }
 
 .header-nav ul {
@@ -119,11 +129,11 @@ h3,
 }
 
 .header-title {
-  width: 698px;
+  max-width: 698px;
 }
 
 .header-subtitle {
-  width: 484px;
+  max-width: 484px;
   font-size: 20px;
   line-height: 120%;
 }
@@ -137,39 +147,59 @@ h3,
 }
 
 main section {
+  width: 100%;
   margin: 45px auto;
 }
 
 .main-section-festival-program {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  gap: 70px;
+}
+
+.main-section-festival-program a {
+  align-self: center;
 }
 
 .section-header {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 0px 15px;
   text-align: center;
 }
 
 .section-header .subtitle-second {
-  width: 588px;
+  max-width: 588px;
   margin: 10px auto;
 }
 
 .article {
-  background-color: #f1fdff;
+  background-color: hsl(189, 100%, 97%);
   border-radius: 10px;
-  width: 1240px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 30px;
   padding: 40px;
-  margin-bottom: 70px;
+  margin: 0 15px;
+}
+
+.article .events-container {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 450px;
+}
+
+.article .img-container {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 600px;
 }
 
 .article img {
-  border-radius: inherit;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .article .article-title {
@@ -204,48 +234,51 @@ main section {
 }
 
 .main-section-reward div {
-  width: 1239px;
+  width: 95%;
   height: 277px;
   background-color: #f2feff;
   border-radius: 10px;
   margin: auto;
   display: flex;
   align-items: center;
-  padding-left: 40px;
+  padding: 40px;
   position: relative;
 }
 
 .main-section-reward div p {
-  width: 391px;
+  max-width: 391px;
   font-size: 27px;
   line-height: 120%;
+  margin: 0;
 }
 
 .main-section-reward .t-shirt {
   position: absolute;
-  right: 170px;
+  right: 14%;
 }
 
 .main-section-reward .flag {
   position: absolute;
-  right: 140px;
+  right: 11%;
   top: 0;
 }
 
 .main-section-donate {
   text-align: center;
+  padding: 20px;
 }
 
-.title-container-donate {
+.main-section-donate .title-container-donate {
   margin-bottom: 77px;
 }
 
-.donate-collected-container {
+.main-section-donate .donate-collected-container {
   margin-bottom: 57px;
 }
 
-.main-section-donate .main-subtitle-second {
-  width: 740px;
+.main-section-donate .subtitle-second {
+  max-width: 740px;
+  margin: auto;
 }
 
 .main-section-donate .donate-quantity li {
@@ -275,51 +308,266 @@ main section {
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
+  gap: 30px;
   margin-bottom: 43px;
 }
 
-.contacts-list {
-  width: 440px;
+.footer-section-contacts .contacts-list {
+  max-width: 440px;
   font-size: 20px;
   line-height: 120%;
 }
 
-.contacts-list li {
+.footer-section-contacts .contacts-list li {
   margin-bottom: 57px;
 }
 
 .footer-section-subscribe {
+  width: 100%;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 90px;
-  padding: 37px 97px 54px 39px;
+  padding: 50px;
+}
+
+.footer-section-subscribe div {
+  max-width: 500px;
+  min-width: 400px;
+}
+
+.footer-section-subscribe img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .footer-section-subscribe p {
-  width: 455px;
+  width: 100%;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 30px;
 }
 
-form input {
+.footer-section-subscribe form {
+  width: 100%;
+}
+
+.footer-section-subscribe form input {
   display: block;
-  width: 506px;
+  width: 100%;
   height: 66px;
-  background-color: #f9fadf;
   border-radius: 61px;
   border-style: none;
   font-size: 20px;
   line-height: 120%;
 }
 
-form input[type="submit"] {
+.footer-section-subscribe form input[type="submit"] {
   cursor: pointer;
 }
 
-form input:not([type="submit"]) {
+.footer-section-subscribe form input:not([type="submit"]) {
   padding-left: 43px;
   margin-bottom: 30px;
+  background-color: #f9fadf;
+}
+
+@media (max-width: 1400px) {
+  .header-bg-img {
+    z-index: -1;
+  }
+}
+
+@media (max-width: 1200px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 60px;
+  }
+
+  .header-subtitle {
+    max-width: 280px;
+  }
+
+  .header-bg-img {
+    width: 120%;
+    object-fit: contain;
+    object-position: right bottom;
+  }
+
+  .main-section-festival-program {
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  .subtitle-first {
+    font-size: 20px;
+  }
+
+  .subtitle-second {
+    font-size: 16px;
+  }
+
+  .article {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 15px;
+  }
+
+  .article .events-container {
+    flex-basis: auto;
+  }
+
+  .article .img-container {
+    flex-basis: auto;
+  }
+
+  .event-item {
+    margin-bottom: 35px;
+  }
+
+  .main-section-reward .t-shirt {
+    right: 0%;
+  }
+
+  .main-section-reward .flag {
+    right: 0%;
+  }
+
+  .footer-section-subscribe {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    gap: 50px;
+  }
+
+  .footer-section-contacts {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 40px 25px;
+  }
+
+  .btn-nav {
+    display: block;
+    margin-left: auto;
+    width: 60px;
+    height: 28px;
+    border: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      #7ae5fd 0%,
+      #7ae5fd 20%,
+      transparent 20%,
+      transparent 40%
+    );
+    cursor: pointer;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  h1 {
+    font-size: 65px;
+  }
+
+  .header-title {
+    max-width: 450px;
+  }
+
+  .article {
+    padding: 20px;
+  }
+
+  .main-section-reward {
+    margin-top: 230px;
+    height: 395px;
+    background-image: none;
+  }
+
+  .main-section-reward div {
+    height: 395px;
+    justify-content: center;
+  }
+
+  .main-section-reward div p {
+    align-self: flex-end;
+  }
+
+  .main-section-reward .t-shirt {
+    transform: translateX(50%);
+    right: 50%;
+    top: -45%;
+  }
+
+  .main-section-reward .flag {
+    transform: translateX(50%);
+    right: 35%;
+    top: -25%;
+  }
+
+  .footer-section-subscribe form input {
+    height: 66px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn-nav {
+    width: 45px;
+    height: 22px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .header-title {
+    max-width: 350px;
+  }
+
+  .header-subtitle {
+    font-size: 16px;
+    max-width: 250px;
+  }
+
+  .main-section-reward div p {
+    max-width: 300px;
+    font-size: 20px;
+  }
+
+  .main-section-donate .donate-quantity li {
+    font-size: 50px;
+  }
+
+  .footer {
+    padding: 20px;
+    margin-top: 140px;
+  }
+
+  .footer-section-contacts .contacts-list {
+    font-size: 16px;
+  }
+
+  .footer-section-contacts .contacts-list li {
+    margin-bottom: 57px;
+  }
+
+  .footer-section-subscribe div {
+    min-width: 300px;
+  }
 }

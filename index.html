@@ -16,155 +16,173 @@
 
   <body>
     <header class="header">
-      <nav class="header-nav">
-        <ul>
-          <li class="item-logo">
-            <a href="#">
-              <img src="./images/Subtract.png" alt="Головний логотип" />
-            </a>
-          </li>
-          <li><a href="#">Контакти</a></li>
-          <li><a href="#">Головна</a></li>
-          <li><a href="#">Програма</a></li>
-          <li>
-            <a class="btn-primary" href="#">Як потрапити</a>
-          </li>
-        </ul>
-      </nav>
-      <h1 class="header-title">Фестиваль Перемоги України</h1>
-      <p class="header-subtitle">
-        Свято для усіх українців, які працювали, боролися й вірили у перемогу
-      </p>
-      <img
-        class="header-bg-img"
-        src="./images/Woman.png"
-        alt="Жінка з прапором України"
-      />
+      <div class="container">
+        <button type="button" class="btn-nav"></button>
+        <nav class="header-nav">
+          <ul>
+            <li class="item-logo">
+              <a href="#">
+                <img src="./images/Subtract.png" alt="Головний логотип" />
+              </a>
+            </li>
+            <li><a href="#">Контакти</a></li>
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Програма</a></li>
+            <li>
+              <a class="btn-primary" href="#">Як потрапити</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="header-title">Фестиваль Перемоги України</h1>
+        <p class="header-subtitle">
+          Свято для усіх українців, які працювали, боролися й вірили у перемогу
+        </p>
+        <picture>
+          <source
+            srcset="./images/Woman-small.png"
+            media="(max-width: 1024px)"
+          />
+          <img
+            class="header-bg-img"
+            src="./images/Woman.png"
+            alt="Жінка з прапором України"
+          />
+        </picture>
+      </div>
     </header>
 
     <main>
-      <section class="main-section-festival-program">
-        <header class="section-header">
-          <h2>Програма фестивалю</h2>
-          <p class="subtitle-first">
-            3 сцени, щоб добре й із задоволенням провести час
-          </p>
-          <p class="subtitle-second">
-            Усі сцени розташовані так, щоб вам було зручно ходити між ними, і
-            вони одна одну не глушили
-          </p>
-        </header>
+      <div class="container">
+        <section class="main-section-festival-program">
+          <header class="section-header">
+            <h2>Програма фестивалю</h2>
+            <p class="subtitle-first">
+              3 сцени, щоб добре й із задоволенням провести час
+            </p>
+            <p class="subtitle-second">
+              Усі сцени розташовані так, щоб вам було зручно ходити між ними, і
+              вони одна одну не глушили
+            </p>
+          </header>
 
-        <article class="article">
+          <article class="article">
+            <div class="events-container">
+              <h3 class="article-title">Сцена Перемоги</h3>
+              <ul class="events-list">
+                <li class="event-item">
+                  <span class="event">Виступ Президента України</span>
+                  <time class="event-time">10:00-12:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Виступ представників ЄС</span>
+                  <time class="event-time">13:00-14:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Виступ представників НАТО</span>
+                  <time class="event-time">14:00-15:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Гімн України</span>
+                  <time class="event-time">21:25-21:30</time>
+                </li>
+              </ul>
+            </div>
+            <div class="img-container">
+              <img src="./images/People.png" alt="Наповнений зал з людьми" />
+            </div>
+          </article>
+
+          <article class="article">
+            <div class="events-container">
+              <h3 class="article-title">Сцена "Музика"</h3>
+              <ul class="events-list">
+                <li class="event-item">
+                  <span class="event">Артем Квасоваров</span>
+                  <time class="event-time">14:00-15:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Степан Мега</span>
+                  <time class="event-time">16:00-17:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Гурт "Протитіла"</span>
+                  <time class="event-time">17:00-18:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Гурт "Надвірна"</span>
+                  <time class="event-time">18:00-19:00</time>
+                </li>
+              </ul>
+            </div>
+            <div class="img-container">
+              <img src="./images/Scene.png" alt="Сцена з виступом артистів" />
+            </div>
+          </article>
+
+          <article class="article">
+            <div class="events-container">
+              <h3 class="article-title">Сцена "Майстер-класи для дітей"</h3>
+              <ul class="events-list">
+                <li class="event-item">
+                  <span class="event">Музей науки</span>
+                  <time class="event-time">14:00-15:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Майстер-клас з ліплення</span>
+                  <time class="event-time">16:00-17:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Майстер-клас з машинобудування</span>
+                  <time class="event-time">17:00-18:00</time>
+                </li>
+                <li class="event-item">
+                  <span class="event">Майстер-клас з роботехінки</span>
+                  <time class="event-time">18:00-19:00</time>
+                </li>
+              </ul>
+            </div>
+            <div class="img-container">
+              <img src="./images/Kids.png" alt="Діти навчаються" />
+            </div>
+          </article>
+
+          <a class="btn-primary" href="#">Дізнатися більше</a>
+        </section>
+
+        <section class="main-section-reward">
           <div>
-            <h3 class="article-title">Сцена Перемоги</h3>
-            <ul class="events-list">
-              <li class="event-item">
-                <span class="event">Виступ Президента України</span>
-                <time class="event-time">10:00-12:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Виступ представників ЄС</span>
-                <time class="event-time">13:00-14:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Виступ представників НАТО</span>
-                <time class="event-time">14:00-15:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Гімн України</span>
-                <time class="event-time">21:25-21:30</time>
-              </li>
+            <p>
+              Кожен учасник фестивалю отримає прапор України та футболку з
+              гербом
+            </p>
+            <img class="t-shirt" src="./images/TShirt.png" alt="Футболка" />
+            <img class="flag" src="./images/Flag.png" alt="Прапор" />
+          </div>
+        </section>
+
+        <section class="main-section-donate">
+          <div class="title-container-donate">
+            <h2>Як потрапити</h2>
+            <p class="subtitle-second">
+              Фестиваль безкоштовний. Будемо збирати пожертви для відбудови
+              зруйнованих українських міст та сіл.
+            </p>
+          </div>
+          <div class="donate-collected-container">
+            <p class="subtitle-first">Наша мета 10 000 000 гривень!</p>
+            <ul class="donate-quantity">
+              <li>00</li>
+              <li>250</li>
+              <li>025</li>
             </ul>
           </div>
-          <img src="./images/People.png" alt="Наповнений зал з людьми" />
-        </article>
-
-        <article class="article">
-          <div>
-            <h3 class="article-title">Сцена "Музика"</h3>
-            <ul class="events-list">
-              <li class="event-item">
-                <span class="event">Артем Квасоваров</span>
-                <time class="event-time">14:00-15:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Степан Мега</span>
-                <time class="event-time">16:00-17:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Гурт "Протитіла"</span>
-                <time class="event-time">17:00-18:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Гурт "Надвірна"</span>
-                <time class="event-time">18:00-19:00</time>
-              </li>
-            </ul>
-          </div>
-          <img src="./images/Scene.png" alt="Сцена з виступом артистів" />
-        </article>
-
-        <article class="article">
-          <div>
-            <h3 class="article-title">Сцена "Майстер-класи для дітей"</h3>
-            <ul class="events-list">
-              <li class="event-item">
-                <span class="event">Музей науки</span>
-                <time class="event-time">14:00-15:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Майстер-клас з ліплення</span>
-                <time class="event-time">16:00-17:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Майстер-клас з машинобудування</span>
-                <time class="event-time">17:00-18:00</time>
-              </li>
-              <li class="event-item">
-                <span class="event">Майстер-клас з роботехінки</span>
-                <time class="event-time">18:00-19:00</time>
-              </li>
-            </ul>
-          </div>
-          <img src="./images/Kids.png" alt="Діти навчаються" />
-        </article>
-
-        <a class="btn-primary" href="#">Дізнатися більше</a>
-      </section>
-
-      <section class="main-section-reward">
-        <div>
-          <p>
-            Кожен учасник фестивалю отримає прапор України та футболку з гербом
-          </p>
-          <img class="t-shirt" src="./images/TShirt.png" alt="Футболка" />
-          <img class="flag" src="./images/Flag.png" alt="Прапор" />
-        </div>
-      </section>
-
-      <section class="main-section-donate">
-        <div class="title-container-donate">
-          <h2>Як потрапити</h2>
-          <p class="subtitle-second">
-            Фестиваль безкоштовний. Будемо збирати пожертви для відбудови
-            зруйнованих українських міст та сіл.
-          </p>
-        </div>
-        <div class="donate-collected-container">
-          <p class="subtitle-first">Наша мета 10 000 000 гривень!</p>
-          <ul class="donate-quantity">
-            <li>00</li>
-            <li>250</li>
-            <li>025</li>
-          </ul>
-        </div>
-        <a class="btn-primary" href="#">Зробити пожертву</a>
-      </section>
+          <a class="btn-primary" href="#">Зробити пожертву</a>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
-      <div>
+      <div class="container">
         <section class="footer-section-contacts">
           <h2>Контакти</h2>
           <ul class="contacts-list">
@@ -182,7 +200,9 @@
         </section>
 
         <section class="footer-section-subscribe">
-          <img src="./images/Email.png" alt="Email" />
+          <div>
+            <img src="./images/Email.png" alt="Email" />
+          </div>
           <div>
             <p class="subtitle-first">
               Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку
